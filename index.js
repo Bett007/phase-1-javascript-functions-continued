@@ -20,3 +20,36 @@ const mondayWork = function(activity = "go to the office") {
 }
 
 mondayWork();
+
+const g = (function (baseNumber) {
+  let result = baseNumber + 3;
+  return result;
+})(2);
+
+console.log(g);
+console.log(typeof(baseNumber));
+
+const array = (function (thingToAdd) {
+  const base = 3;
+  return [
+    function () {
+      return base + thingToAdd;
+    },
+    function () {
+      return base;
+    },
+  ];
+})(2);
+
+console.log(array[0]());
+console.log(array[1]());
+
+const wrapAdjective = function (flair = "*"){
+    return function (msg = "special"){
+        return `You are ${flair}${msg}${flair}!`;
+    };
+}
+
+wrapAdjective("||")("a dedicated programmer");
+let result = wrapAdjective("||")("a dedicated programmer");
+console.log(result);
