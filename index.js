@@ -14,7 +14,9 @@ console.log(fn);
 fn();
 
 const mondayWork = function(activity = "go to the office") {
+    let result =`This Monday, I will ${activity}.`;
+    return result;
     console.log(`This Monday, I will ${activity}`);
 }
 
-mondayWork("go home and sleep");
+mondayWork();
